@@ -3,9 +3,10 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { Suspense } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyle, theme } from '@/styles';
-
+import { Header, Footer } from '@/components';
 import { 
   HomePage, 
+  ScrollPage,
   ErrorPage 
 } from '@/pages';
 
@@ -27,6 +28,10 @@ const publicRoutes: RouteObject[] = [
         path: '/',
         element: <HomePage />,
       },
+      {
+        path: '/scroll',
+        element: <ScrollPage />,
+      },
     ],
   },
 ];
@@ -39,7 +44,9 @@ const routes: RouteObject[] = [
   {
     element:(
       <QueryClientProvider client={queryClient}>
-            <Outlet />
+        <Header />
+        <Outlet />
+        <Footer />
       </QueryClientProvider>
     ),
     errorElement: <Navigate to="/error" replace/>,

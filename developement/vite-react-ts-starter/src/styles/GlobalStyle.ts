@@ -24,10 +24,12 @@ export const GlobalStyle = createGlobalStyle`
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
+    }
 
-        @media (max-width: 768px) {
-            padding: 1rem;
-        }
+    #root {
+        display: block;
+        width: 100%;
+        height: 100%;
     }
 
     a {
