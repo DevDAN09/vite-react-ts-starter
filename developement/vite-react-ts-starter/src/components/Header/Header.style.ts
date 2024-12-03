@@ -17,6 +17,10 @@ export const HeaderContent = styled.div`
     padding: 0 24px;
     max-width: 1440px;
     margin: 0 auto;
+
+    @media (max-width: 768px) {
+        justify-content: space-between;
+    }
 `
 
 export const SubMenuBlock = styled.div`
@@ -30,8 +34,35 @@ export const SubMenuBlock = styled.div`
 `
 
 export const SubMenuContent = styled.div`
-
     margin: 0 auto;
     display: flex;
     gap: 20px;
+`
+
+export const SlideMenuBlock = styled.div`
+    margin: 0 auto;
+    width: 100%;
+    height: 100vh;
+    max-width: 1296px;
+    padding: 10px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+
+`
+
+export const SlideMenuContent = styled.div`
+    margin: 0 auto;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+`
+
+export const HamburgerButton = styled.button`
+    background-color: transparent;
+    border: none;
+    color: black;
+    padding: 0;
+    font-size: 24px;
+    cursor: pointer;
+    line-height: 64px;
 `

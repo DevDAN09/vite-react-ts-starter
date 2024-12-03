@@ -1,8 +1,8 @@
 import {
-    ScrollPageStyle
+    ScrollPageStyle,
+    TestBox
 } from "./ScrollPage.style"
 import { useEffect, useState, useRef } from 'react';
-import { Header } from "@/components";
 
 const ScrollPage: React.FC = () => {
     const boxRef = useRef<HTMLDivElement>(null);
@@ -26,7 +26,6 @@ const ScrollPage: React.FC = () => {
 
     return (
         <ScrollPageStyle style={{ height: '200vh' }}>
-            {window.innerHeight}
             <div
                 ref = {boxRef}
                 style = {{
@@ -37,6 +36,8 @@ const ScrollPage: React.FC = () => {
             >
                 {isBoxVisible ? 'Box is visible' : 'Box is hidden'}
             </div>
+            <TestBox>
+            </TestBox>
         </ScrollPageStyle>
     )
 }
